@@ -14,6 +14,7 @@ public enum InstanceStatus {
 
     public static InstanceStatus toEnum(String status) {
         if (status != null) {
+            logger.info("Instance status is {}", status);
             return InstanceStatus.valueOf(status.toUpperCase());
         }
         logger.warn("Instance status is null, defaulting to UNKNOWN");
